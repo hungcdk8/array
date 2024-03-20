@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/css/style.css">
+<div class="backgruond">
+  <!-- Tab items -->
+  <div class="tabs">
+    <div class="tab-item active">
+      <i class="tab-icon fas fa-code"></i>
+      MP3
+    </div>
+    <div class="tab-item">
+      <i class="tab-icon fas fa-cog"></i>
+      MP4
+    </div>
+    <div class="tab-item">
+      <i class="tab-icon fas fa-plus-circle"></i>
+      KARAOK
+    </div>
+    <div class="tab-item">
+      <i class="tab-icon fas fa-pen-nib"></i>
+      LỜI BÀI HÁT
+    </div>
+    <div class="line"></div>
+  </div>
+
+  <!-- Tab content -->
+  <div class="tab-content">
+    <div class="tab-pane active">
+      <h2>React</h2>
+      <p>Chào các bạn, hôm nay cafedev chia sẻ cho ace một danh sách các bài tập từ cơ bản tới nâng cao liên quan tới các kiến thức cơ bản trong lập trình Javascript. Cụ thể, trong bài này chúng ta sẽ làm quen với Object, this, new, constructorm, Optional. Từ đó giúp ace nâng cao kiến thức, kỹ năng, kinh nghiệm lập trình của mình và áp dụng nó vào thực tế.
+        Trước khi đi vào chi tiết bài tập, cafedev khuyến khích ace tự code bài tập của mình trước khi tham khảo bài hướng dẫn nhé. 
+        Để chạy hoặc code các bài tập sau, ace có thể code trên trang web này như sau: 
+        Chọn new
+        Chọn dự án bạn muốn code, ở đây có nhiều lựa chọn như Javascript, AngularJS, React,…. Tất nhiên mình sẽ chọn Javascript.
+        Sau đó bạn sẽ thấy nơi bạn code.
+        Sau khi code sau chọn Preview để xem kết quả.
+        Ngoài ra ace cũng có thể dùng các IDE đã được giới thiệu tại đây để code và chạy code đó trên máy tính của mình nhé 
+        Lưu ý: Mọi bài tập bên dưới cũng như các bài tập khác trong Series Javascript này được tạo ra từ các bài học và kiến thức của từng phần trong series tự học Javascript này. Nếu ace nào chưa làm được hoặc chưa hiểu kỹ về bài học thì bạn có thể tham khảo lại series tự học này nhé. Chúc các bạn thành công</p>
+    </div>
+    <div class="tab-pane">
+      <h2>Angular</h2>
+      <p>Khai báo<br>
+
+        Cách 1: <br>
+        
+        Type <Tên kiểu mảng> = Array[Chỉ số] Of <Kiểu phần tử>;<br>
+        Var <Tên biến mảng> : <Tên kiểu mảng>;
+        Cách 2:
+        
+        Var <Tên biến mảng> : Array[Chỉ số] Of <Kiểu phần tử>;
+        Trong đó chỉ số phải là một kiểu miền con, kiểu vô hướng liệt kê, kiểu char hoặc kiểu boolean. {Tuy nhiên. người ta thường dùng kiểu miền con các số nguyên là dễ hình dung nhất vì nó gần giống với khái niệm chỉ số trong toán học.}
+        
+        Ví dụ:
+        
+        Type Mangnguyen = Array[1..5] Of Integer;
+            MangKytu = Array[Byte] Of Char;
+        Var A : Mangnguyen;
+            C : MangKytu;
+        hoặc:
+        
+        Var A : Array[1..5] Of Integer;
+            C : Array[Byte] Of Char;
+        Cách khai báo trực tiếp có vẻ đơn giản và ngắn gọn hơn so với cách khai báo gián tiếp nhưng nhiều TH ta bắt buộc phải dùng cách khai báo gián tiếp.
+        
+        Truy xuất
+        Mỗi phần tử của mảng được truy xuất thông qua cú pháp:
+        
+        <Tên biến mảng>[<Chỉ số>]
+        Ví dụ: A[1], A[2],…
+        
+        Chú ý: Hai mảng A và B có cùng số phần tử và cùng kiểu phần tử, ta có thể thay toàn bộ phần tử A bởi các phần tử tương ứng của B bằng một phép gán A := B.
+        
+        Mảng nhiều chiều
+        Khai báo
+        
+        Cách 1:
+        
+        Type <Tên kiêu mảng> = Array[Chỉ số 1, Chỉ số 2] Of <Kiểu phần tử>;
+        Var <Tên biến mảng> : <Tên kiểu mảng>;
+        Cách 2:
+        
+        Var <Tên biến mảng> : Array[chỉ số 1, chỉ số 2] Of <Kiểu phần tử>;
+        Chỉ số 1 và chỉ số 2 là các chỉ số của hàng và cột, chúng cách nhau bởi dấu phẩy
+        
+        Ví dụ:
+        
+        Type Mangnguyen = Array[1..5,1..3] Of Integer;
+        Var A : Mangnguyen;
+        hoặc:
+        
+        Var a: Array[1..5, 1..3] Of Integer;
+        Sau khi khai báo mảng A sẽ có 5 hàng và 3 cột.
+        
+        Chú ý: Mảng 2 chiều còn gọi là ma trận.
+        
+        Cách truy xuất
+        Để truy xuất đến phần tử hàng i cột j ta viết A[i, j] hoặc a[i][j].
+        
+        Ví dụ: A[1, 2], A[2][5].</p>
+    </div>
+    <div class="tab-pane">
+      <h2>Ember</h2>
+      <p>Đối Arraytượng, giống như mảng trong các ngôn ngữ lập trình khác, cho phép lưu trữ một tập hợp nhiều mục dưới một tên biến duy nhất và có các thành viên để thực hiện các thao tác mảng phổ biến .<br>
+
+        Sự miêu tả<br>
+        Trong JavaScript, mảng không phải là mảng nguyên thủy mà thay vào đó là Arraycác đối tượng có các đặc điểm cốt lõi sau:<br>
+        
+        Mảng JavaScript có thể thay đổi kích thước và có thể chứa hỗn hợp các loại dữ liệu khác nhau . (Khi những đặc điểm đó không mong muốn, hãy sử dụng mảng đã nhập thay thế.)<br>
+        Mảng JavaScript không phải là mảng kết hợp và do đó, các phần tử mảng không thể được truy cập bằng cách sử dụng các chuỗi tùy ý làm chỉ mục, nhưng phải được truy cập bằng cách sử dụng các số nguyên không âm (hoặc dạng chuỗi tương ứng của chúng) làm chỉ mục.<br>
+        Mảng JavaScript không được lập chỉ mục : phần tử đầu tiên của mảng nằm ở chỉ mục 0, phần tử thứ hai ở chỉ mục 1, v.v. - và phần tử cuối cùng ở giá trị lengthtrừ đi thuộc tính của mảng 1.<br>
+        Hoạt động sao chép mảng của JavaScript tạo ra các bản sao nông . (Tất cả các thao tác sao chép tích hợp tiêu chuẩn với bất kỳ đối tượng JavaScript nào đều tạo ra các bản sao nông, thay vì các bản sao sâu ).<br>
+        chỉ số mảng
+        Arraycác đối tượng không thể sử dụng các chuỗi tùy ý làm chỉ mục phần tử (như trong một mảng kết hợp ) mà phải sử dụng các số nguyên không âm (hoặc dạng chuỗi tương ứng của chúng). Việc đặt hoặc truy cập thông qua các số không phải số nguyên sẽ không đặt hoặc truy xuất một phần tử từ chính danh sách mảng nhưng sẽ đặt hoặc truy cập một biến được liên kết với bộ sưu tập thuộc tính đối tượng của mảng đó . Các thuộc tính đối tượng của mảng và danh sách các phần tử mảng là riêng biệt và các hoạt động truyền tải và đột biến của mảng không thể được áp dụng cho các thuộc tính được đặt tên này.<br>
+        
+        Các phần tử mảng là các thuộc tính đối tượng giống như toStringmột thuộc tính (tuy nhiên, cụ thể hơn toString()là một phương thức). Tuy nhiên, việc cố gắng truy cập một phần tử của mảng như sau sẽ gây ra lỗi cú pháp vì tên thuộc tính không hợp lệ:<br>
+        
+        JS<br>
+        Sao chép vào clipboard<br>
+        arr.0; // a syntax error<br>
+        Cú pháp JavaScript yêu cầu các thuộc tính bắt đầu bằng một chữ số phải được truy cập bằng ký hiệu ngoặc thay vì ký hiệu dấu chấm . Cũng có thể trích dẫn các chỉ số mảng (ví dụ years['2']thay vì years[2]), mặc dù thường không cần thiết.<br>
+        
+        in được công cụ JavaScript ép buộc thành một chuỗi thông qua một 2chuyển đổi ngầm . Kết quả là và sẽ đề cập đến hai vị trí khác nhau trên đối tượng và ví dụ sau có thể là :years[2]toString'2''02'yearstrue<br>
+        
+        JS<br>
+        Sao chép vào clipboard<br>
+        console.log(years["2"] !== years["02"]);<br>
+        Chỉ years['2']là một chỉ mục mảng thực tế. years['02']là thuộc tính chuỗi tùy ý sẽ không được truy cập trong phép lặp mảng.<br>
+        
+        Mối quan hệ giữa độ dài và tính chất số<br>
+        lengthThuộc tính và thuộc tính số của mảng JavaScript được kết nối.<br>
+        
+        Một số phương thức mảng dựng sẵn (ví dụ: join(), slice(), indexOf(), v.v.) tính đến giá trị thuộc tính của mảng lengthkhi chúng được gọi.<br>
+        
+        Các phương thức khác (ví dụ: push(), splice(), v.v.) cũng dẫn đến cập nhật thuộc tính của mảng length.<br>
+        
+        JS<br>
+        Sao chép vào clipboard<br>
+        const fruits = [];<br>
+        fruits.push("banana", "apple", "peach");<br>
+        console.log(fruits.length); // 3<br>
+        Khi đặt thuộc tính trên mảng JavaScript khi thuộc tính là chỉ mục mảng hợp lệ và chỉ mục đó nằm ngoài giới hạn hiện tại của mảng, công cụ sẽ cập nhật thuộc lengthtính của mảng tương ứng:<br>
+        
+        JS<br>
+        Sao chép vào clipboard<br>
+        fruits[5] = "mango";<br>
+        console.log(fruits[5]); // 'mango'<br>
+        console.log(Object.keys(fruits)); // ['0', '1', '2', '5']<br>
+        console.log(fruits.length); // 6<br>
+        Việc tăng lengthphạm vi mở rộng mảng bằng cách thêm các vị trí trống mà không tạo bất kỳ phần tử mới nào - thậm chí không phải undefined.<br>
+        <br>
+        JS<br>
+        Sao chép vào clipboard<br>
+        fruits.length = 10;<br>
+        console.log(fruits); // ['banana', 'apple', 'peach', empty x 2, 'mango', empty x 4]<br>
+        console.log(Object.keys(fruits)); // ['0', '1', '2', '5']<br>
+        console.log(fruits.length); // 10<br>
+        console.log(fruits[8]); // undefined<br>
+        lengthTuy nhiên, việc giảm thuộc tính sẽ xóa các phần tử.<br>
+        
+        JS<br>
+        Sao chép vào clipboard<br>
+        fruits.length = 2;<br>
+        console.log(Object.keys(fruits)); // ['0', '1']<br>
+        console.log(fruits.length); // 2<br>
+        Điều này được giải thích thêm trên lengthtrang.<br>
+        
+        Phương thức mảng và các vị trí trống<br>
+        Các phương thức mảng có các hành vi khác nhau khi gặp các khe trống trong mảng thưa thớt . Nói chung, các phương thức cũ hơn (ví dụ forEach) xử lý các vị trí trống khác với các chỉ mục chứa undefined.<br>
+        
+        Các phương pháp có cách xử lý đặc biệt cho các vị trí trống bao gồm: concat(), copyWithin(), every(), filter(), flat(), flatMap(), forEach(), indexOf(), lastIndexOf(), map(), reduce(), reduceRight(), reverse(), slice(), some(), sort()và splice(). Các phương pháp lặp lại như forEachkhông truy cập vào các vị trí trống. Các phương pháp khác, chẳng hạn như concat, copyWithin, v.v., giữ nguyên các vị trí trống khi thực hiện sao chép, do đó cuối cùng mảng vẫn còn thưa thớt.<br>
+        
+        JS<br>
+        Sao chép vào clipboard<br>
+        const colors = ["red", "yellow", "blue"];<br>
+        colors[5] = "purple";<br>
+        colors.forEach((item, index) => {<br>
+          console.log(`${index}: ${item}`);<br>
+        });<br>
+        // Output:<br>
+        // 0: red<br>
+        // 1: yellow<br>
+        // 2: blue<br>
+        // 5: purple<br>
+        
+        colors.reverse(); // ['purple', empty × 2, 'blue', 'yellow', 'red']<br>
+        Các phương pháp mới hơn (ví dụ: keys) không xử lý các vị trí trống một cách đặc biệt và xử lý chúng như thể chúng chứa các tệp undefined. Các phương thức kết hợp các vị trí trống với undefinedcác phần tử bao gồm: entries(), fill(), find(), findIndex(), findLast(), findLastIndex(), includes(), join(), keys(), toLocaleString(), toReversed(), toSorted(), toSpliced(), values()và with().
+        
+        JS<br>
+        Sao chép vào clipboard<br>
+        const colors = ["red", "yellow", "blue"];<br>
+        colors[5] = "purple";<br>
+        const iterator = colors.keys();<br>
+        for (const key of iterator) {<br>
+          console.log(`${key}: ${colors[key]}`);<br>
+        }<br>
+        // Output<br>
+        // 0: red<br>
+        // 1: yellow<br>
+        // 2: blue<br>
+        // 3: undefined<br>
+        // 4: undefined<br>
+        // 5: purple<br>
+        
+        const newColors = colors.toReversed(); // ['purple', undefined, undefined, 'blue', 'yellow', 'red']<br>
+        Phương pháp sao chép và phương pháp biến đổi<br>
+        Một số phương thức không làm thay đổi mảng hiện có mà phương thức đó được gọi mà thay vào đó trả về một mảng mới. Họ làm như vậy bằng cách trước tiên xây dựng một mảng mới và sau đó điền các phần tử vào đó. Việc sao chép luôn diễn ra nông cạn - phương thức này không bao giờ sao chép bất cứ thứ gì ngoài mảng được tạo ban đầu. Các phần tử của (các) mảng ban đầu được sao chép vào mảng mới như sau:
+        
+        Đối tượng: tham chiếu đối tượng được sao chép vào mảng mới. Cả mảng ban đầu và mảng mới đều đề cập đến cùng một đối tượng. Nghĩa là, nếu một đối tượng được tham chiếu được sửa đổi, những thay đổi đó sẽ hiển thị cho cả mảng mới và mảng ban đầu.<br>
+        Các kiểu nguyên thủy như chuỗi, số và booleans (không phải String, Numbervà Booleanđối tượng): giá trị của chúng được sao chép vào mảng mới.<br>
+        Các phương thức khác làm thay đổi mảng mà phương thức đó được gọi, trong trường hợp đó giá trị trả về của chúng khác nhau tùy thuộc vào phương thức: đôi khi là một tham chiếu đến cùng một mảng, đôi khi là độ dài của mảng mới.<br>
+        
+        Các phương thức sau đây tạo các mảng mới bằng cách truy cập this.constructor[Symbol.species]để xác định hàm tạo sẽ sử dụng: concat(), filter(), flat(), flatMap(), map(), slice()và splice()(để xây dựng mảng các phần tử bị loại bỏ được trả về).<br>
+        
+        Các phương thức sau đây luôn tạo các mảng mới bằng Arrayhàm tạo cơ sở: toReversed(), toSorted(), toSpliced()và with().<br>
+        
+        Bảng sau liệt kê các phương thức làm thay đổi mảng ban đầu và phương pháp thay thế không thay đổi tương ứng:<br>
+        
+        Phương pháp đột biến	Thay thế không đột biến<br>
+        copyWithin()	Không có một phương pháp thay thế<br>
+        fill()	Không có một phương pháp thay thế<br>
+        pop()	slice(0, -1)<br>
+        push(v1, v2)	concat([v1, v2])<br>
+        reverse()	toReversed()<br>
+        shift()	slice(1)<br>
+        sort()	toSorted()<br>
+        splice()	toSpliced()<br>
+        unshift(v1, v2)	toSpliced(0, 0, v1, v2)<br>
+        Một cách dễ dàng để thay đổi một phương thức đột biến thành một phương pháp thay thế không đột biến là sử dụng cú pháp trải rộng hoặc slice()tạo một bản sao trước:<br>
+        
+        JS<br>
+        Sao chép vào clipboard<br>
+        arr.copyWithin(0, 1, 2); // mutates arr<br>
+        const arr2 = arr.slice().copyWithin(0, 1, 2); // does not mutate arr<br>
+        const arr3 = [...arr].copyWithin(0, 1, 2); // does not mutate arr<br>
+        Phương pháp lặp<br>
+        Nhiều phương thức mảng lấy hàm gọi lại làm đối số. Hàm gọi lại được gọi tuần tự và nhiều nhất một lần cho mỗi phần tử trong mảng và giá trị trả về của hàm gọi lại được sử dụng để xác định giá trị trả về của phương thức. Tất cả đều có chung một chữ ký:<br>
+        
+        JS<br>
+        Sao chép vào clipboard<br>
+        method(callbackFn, thisArg)<br>
+        Where callbackFncó ba đối số:<br>
+        
+        element<br>
+        Phần tử hiện tại đang được xử lý trong mảng.<br>
+        
+        index<br>
+        Chỉ mục của phần tử hiện tại đang được xử lý trong mảng.<br>
+        
+        array<br>
+        Mảng mà phương thức được gọi.<br>
+        
+        Những gì callbackFnđược mong đợi trả về sẽ phụ thuộc vào phương thức mảng được gọi.<br>
+        
+        Đối thisArgsố (mặc định là undefined) sẽ được sử dụng làm thisgiá trị khi gọi callbackFn. Giá thistrị cuối cùng có thể quan sát được bởi callbackFnđược xác định theo các quy tắc thông thường : nếu callbackFnkhông nghiêm ngặt , thiscác giá trị nguyên thủy được gói vào các đối tượng và undefined/ nullđược thay thế bằng globalThis. Đối thisArgsố không liên quan đến bất kỳ đối sốcallbackFn nào được xác định bằng hàm mũi tên , vì các hàm mũi tên không có ràng buộc riêng .this
+        
+        Đối arraysố được truyền vào callbackFnsẽ hữu ích nhất nếu bạn muốn đọc một chỉ mục khác trong quá trình lặp lại, vì không phải lúc nào bạn cũng có thể có một biến hiện có tham chiếu đến mảng hiện tại. Nói chung, bạn không nên thay đổi mảng trong quá trình lặp (xem phần Thay đổi mảng ban đầu trong các phương thức lặp ), nhưng bạn cũng có thể sử dụng đối số này để làm như vậy. Đối số không phảiarray là mảng đang được xây dựng, trong trường hợp các phương thức như , và - không có cách nào để truy cập vào mảng đang được xây dựng từ hàm gọi lại.map()filter()flatMap()
+        
+        Tất cả các phương pháp lặp đều là sao chép và chung chung , mặc dù chúng hoạt động khác với các vị trí trống .<br>
+        
+        Các phương pháp sau đây được lặp lại: every(), filter(), find(), findIndex(), findLast(), findLastIndex(), flatMap(), forEach(), map()và some().<br>
+        
+        Đặc biệt, every(), find(), findIndex(), findLast(), findLastIndex()và some()không phải lúc nào cũng gọi callbackFntrên mọi phần tử - chúng dừng lặp lại ngay khi giá trị trả về được xác định.<br>
+        
+        Các phương thức reduce()and reduceRight()cũng nhận một hàm gọi lại và chạy nó nhiều nhất một lần cho mỗi phần tử trong mảng, nhưng chúng có dấu hiệu hơi khác so với các phương thức lặp thông thường (ví dụ: chúng không chấp nhận thisArg).<br>
+        
+        Phương thức này sort()cũng có chức năng gọi lại, nhưng nó không phải là phương thức lặp. Nó thay đổi mảng tại chỗ, không chấp nhận thisArgvà có thể gọi lại lệnh gọi lại nhiều lần trên một chỉ mục.<br>
+        
+        Các phương thức lặp lặp lại mảng như sau (với nhiều chi tiết kỹ thuật bị bỏ qua):<br>
+        
+        JS<br>
+        Sao chép vào clipboard<br>
+        function method(callbackFn, thisArg) {<br>
+          const length = this.length;<br>
+          for (let i = 0; i < length; i++) {<br>
+            if (i in this) {<br>
+              const result = callbackFn.call(thisArg, this[i], i, this);<br>
+              // Do something with result; maybe return early<br>
+            }<br>
+          }<br>
+        }<br>
+        Lưu ý những điều dưới đây:<br>
+        
+        Không phải tất cả các phương pháp đều thực hiện i in thisbài kiểm tra. Các phương thức find, findIndex, findLastvà findLastIndexthì không, nhưng các phương thức khác thì có.<br>
+        Việc này lengthđược ghi nhớ trước khi vòng lặp bắt đầu. Điều này ảnh hưởng đến cách xử lý các thao tác chèn và xóa trong quá trình lặp (xem mảng ban đầu đột biến trong các phương thức lặp ).<br>
+        Phương thức này không ghi nhớ nội dung mảng, vì vậy nếu bất kỳ chỉ mục nào được sửa đổi trong quá trình lặp, giá trị mới có thể được quan sát thấy.<br>
+        Đoạn mã trên lặp lại mảng theo thứ tự tăng dần của chỉ mục. Một số phương thức lặp theo thứ tự giảm dần của chỉ mục ( for (let i = length - 1; i >= 0; i--)): reduceRight(), findLast(), và findLastIndex().<br>
+        reducevà reduceRightcó chữ ký hơi khác nhau và không phải lúc nào cũng bắt đầu ở phần tử đầu tiên/cuối cùng.<br>
+        Các phương thức mảng chung<br>
+        Các phương thức mảng luôn mang tính chung chung — chúng không truy cập bất kỳ dữ liệu nội bộ nào của đối tượng mảng. Họ chỉ truy cập các phần tử mảng thông qua lengththuộc tính và các phần tử được lập chỉ mục. Điều này có nghĩa là chúng cũng có thể được gọi trên các đối tượng giống như mảng.<br>
+        
+        JS<br>
+        Sao chép vào clipboard<br>
+        const arrayLike = {<br>
+          0: "a",<br>
+          1: "b",<br>
+          length: 2,<br>
+        };<br>
+        console.log(Array.prototype.join.call(arrayLike, "+")); // 'a+b'<br>
+        Chuẩn hóa thuộc tính độ dài<br>
+        Thuộc lengthtính được chuyển đổi thành một số nguyên và sau đó được đặt trong phạm vi từ 0 đến 2 53 - 1. NaNtrở thành 0, do đó ngay cả khi lengthkhông có mặt hoặc là undefined, nó vẫn hoạt động như thể nó có giá trị 0.<br>
+        
+        Ngôn ngữ tránh cài đặt lengththành số nguyên không an toàn . Tất cả các phương thức tích hợp sẵn sẽ đưa ra TypeErrorif lengthsẽ được đặt thành một số lớn hơn 2 53 - 1. Tuy nhiên, do lengththuộc tính của mảng sẽ đưa ra lỗi nếu nó được đặt thành lớn hơn 2 32 - 1, nên ngưỡng số nguyên an toàn thường không đạt được trừ khi phương thức được gọi trên một đối tượng không phải mảng.
+        
+        JS<br>
+        Sao chép vào clipboard<br>
+        Array.prototype.flat.call({}); // []<br>
+        Một số phương thức mảng thiết lập thuộc lengthtính của đối tượng mảng. Chúng luôn đặt giá trị sau khi chuẩn hóa, do đó lengthluôn kết thúc dưới dạng số nguyên.<br>
+        
+        JS<br>
+        Sao chép vào clipboard<br>
+        const a = { length: 0.7 };<br>
+        Array.prototype.push.call(a);<br>
+        console.log(a.length); // 0<br>
+        Các đối tượng dạng mảng<br>
+        Thuật ngữ đối tượng giống mảng dùng để chỉ bất kỳ đối tượng nào không bị ném ra trong quá lengthtrình chuyển đổi được mô tả ở trên. Trong thực tế, đối tượng như vậy dự kiến ​​​​sẽ thực sự có một lengththuộc tính và có các phần tử được lập chỉ mục trong phạm 0vi length - 1. (Nếu nó không có tất cả các chỉ mục, thì nó sẽ có chức năng tương đương với một mảng thưa thớt .) Bất kỳ chỉ số nguyên nào nhỏ hơn 0 hoặc lớn hơn length - 1đều bị bỏ qua khi một phương thức mảng hoạt động trên một đối tượng giống mảng.
+        
+        Nhiều đối tượng DOM giống như mảng - ví dụ: NodeListvà HTMLCollection. Đối argumentstượng cũng giống như mảng. Bạn có thể gọi các phương thức mảng trên chúng ngay cả khi chúng không có các phương thức này.<br>
+        
+        JS<br>
+        Sao chép vào clipboard<br>
+        function f() {<br>
+          console.log(Array.prototype.join.call(arguments, "+"));<br>
+        }<br>
+        
+        f("a", "b"); // 'a+b'<br>
+        Người xây dựng<br>
+        Array()<br>
+        Tạo một Arrayđối tượng mới.<br>
+        
+        Thuộc tính tĩnh<br>
+        Array[@@species]<br>
+        Trả về Arrayhàm tạo.<br>
+        
+        Phương pháp tĩnh<br>
+        Array.from()<br>
+        Tạo một Arraythể hiện mới từ một đối tượng có thể lặp lại hoặc giống như mảng.<br>
+        
+        Array.fromAsync()<br>
+        Tạo một Arrayphiên bản mới từ một đối tượng có thể lặp lại, có thể lặp lại hoặc giống như mảng không đồng bộ.<br>
+        
+        Array.isArray()<br>
+        Trả về truenếu đối số là một mảng hoặc falsengược lại.<br>
+        
+        Array.of()
+        Tạo một Arrayphiên bản mới với số lượng đối số thay đổi, bất kể số lượng hoặc loại đối số.
+        
+        Thuộc tính phiên bản
+        Các thuộc tính này được xác định Array.prototypevà chia sẻ bởi tất cả Arraycác phiên bản.
+        
+        Array.prototype.constructor
+        Hàm xây dựng đã tạo đối tượng cá thể. Đối với Arraycác trường hợp, giá trị ban đầu là Arrayhàm tạo.
+        
+        Array.prototype[@@unscopables]
+        Chứa các tên thuộc tính không có trong tiêu chuẩn ECMAScript trước phiên bản ES2015 và bị bỏ qua vì withmục đích ràng buộc câu lệnh.
+        
+        Các thuộc tính này là thuộc tính riêng của từng Arrayphiên bản.
+        
+        length
+        Phản ánh số lượng phần tử trong một mảng.
+        
+        Phương thức sơ thẩm
+        Array.prototype.at()
+        Trả về mục mảng tại chỉ mục đã cho. Chấp nhận số nguyên âm, đếm ngược từ mục cuối cùng.
+        
+        Array.prototype.concat()
+        Trả về một mảng mới là mảng đang gọi được nối với (các) mảng và/hoặc (các) giá trị khác.
+        
+        Array.prototype.copyWithin()
+        Sao chép một chuỗi các phần tử mảng trong một mảng.
+        
+        Array.prototype.entries()
+        Trả về một đối tượng lặp mảng mới chứa các cặp khóa/giá trị cho mỗi chỉ mục trong một mảng.
+        
+        Array.prototype.every()
+        Trả về truenếu mọi phần tử trong mảng gọi thỏa mãn chức năng kiểm tra.
+        
+        Array.prototype.fill()
+        Điền vào tất cả các phần tử của một mảng từ chỉ mục bắt đầu đến chỉ mục kết thúc bằng một giá trị tĩnh.
+        
+        Array.prototype.filter()
+        Trả về một mảng mới chứa tất cả các phần tử của mảng đang gọi mà hàm lọc được cung cấp trả về true.
+        
+        Array.prototype.find()
+        Trả về giá trị của phần tử đầu tiên trong mảng thỏa mãn hàm kiểm tra được cung cấp hoặc undefinednếu không tìm thấy phần tử thích hợp.
+        
+        Array.prototype.findIndex()
+        Trả về chỉ mục của phần tử đầu tiên trong mảng thỏa mãn chức năng kiểm tra được cung cấp hoặc -1nếu không tìm thấy phần tử thích hợp.
+        
+        Array.prototype.findLast()
+        Trả về giá trị của phần tử cuối cùng trong mảng thỏa mãn hàm kiểm tra được cung cấp hoặc undefinednếu không tìm thấy phần tử thích hợp.
+        
+        Array.prototype.findLastIndex()
+        Trả về chỉ mục của phần tử cuối cùng trong mảng thỏa mãn chức năng kiểm tra được cung cấp hoặc -1nếu không tìm thấy phần tử thích hợp.
+        
+        Array.prototype.flat()
+        Trả về một mảng mới với tất cả các phần tử mảng con được nối vào mảng đó theo cách đệ quy đến độ sâu đã chỉ định.
+        
+        Array.prototype.flatMap()
+        Trả về một mảng mới được hình thành bằng cách áp dụng hàm gọi lại đã cho cho từng phần tử của mảng gọi và sau đó làm phẳng kết quả theo một cấp.
+        
+        Array.prototype.forEach()
+        Gọi một hàm cho từng phần tử trong mảng gọi.
+        
+        Array.prototype.includes()
+        Xác định xem mảng gọi có chứa giá trị hay không, trả về truehoặc falsekhi thích hợp.
+        
+        Array.prototype.indexOf()
+        Trả về chỉ mục đầu tiên (ít nhất) mà tại đó có thể tìm thấy một phần tử nhất định trong mảng đang gọi.
+        
+        Array.prototype.join()
+        Nối tất cả các phần tử của mảng thành một chuỗi.
+        
+        Array.prototype.keys()
+        Trả về một trình vòng lặp mảng mới chứa các khóa cho từng chỉ mục trong mảng đang gọi.
+        
+        Array.prototype.lastIndexOf()
+        Trả về chỉ mục cuối cùng (lớn nhất) mà tại đó có thể tìm thấy một phần tử nhất định trong mảng đang gọi hoặc -1nếu không tìm thấy phần tử nào.
+        
+        Array.prototype.map()
+        Trả về một mảng mới chứa kết quả của việc gọi hàm trên mọi phần tử trong mảng gọi.
+        
+        Array.prototype.pop()
+        Loại bỏ phần tử cuối cùng khỏi mảng và trả về phần tử đó.
+        
+        Array.prototype.push()
+        Thêm một hoặc nhiều phần tử vào cuối mảng và trả về phần tử mới lengthcủa mảng.
+        
+        Array.prototype.reduce()
+        Thực thi chức năng gọi lại "bộ giảm tốc" do người dùng cung cấp trên từng phần tử của mảng (từ trái sang phải), để giảm nó thành một giá trị duy nhất.
+        
+        Array.prototype.reduceRight()
+        Thực thi chức năng gọi lại "bộ giảm tốc" do người dùng cung cấp trên từng phần tử của mảng (từ phải sang trái), để giảm nó thành một giá trị duy nhất.
+        
+        Array.prototype.reverse()
+        Đảo ngược thứ tự các phần tử của mảng tại chỗ . (Đầu tiên trở thành cuối cùng, cuối cùng trở thành đầu tiên.)
+        
+        Array.prototype.shift()
+        Loại bỏ phần tử đầu tiên khỏi mảng và trả về phần tử đó.
+        
+        Array.prototype.slice()
+        Trích xuất một phần của mảng đang gọi và trả về một mảng mới.
+        
+        Array.prototype.some()
+        Trả về truenếu ít nhất một phần tử trong mảng gọi thỏa mãn chức năng kiểm tra được cung cấp.
+        
+        Array.prototype.sort()
+        Sắp xếp các phần tử của một mảng tại chỗ và trả về mảng đó.
+        
+        Array.prototype.splice()
+        Thêm và/hoặc xóa các phần tử khỏi một mảng.
+        
+        Array.prototype.toLocaleString()
+        Trả về một chuỗi đã bản địa hóa đại diện cho mảng đang gọi và các phần tử của nó. Ghi đè Object.prototype.toLocaleString()phương thức.
+        
+        Array.prototype.toReversed()
+        Trả về một mảng mới với các phần tử theo thứ tự đảo ngược mà không sửa đổi mảng ban đầu.
+        
+        Array.prototype.toSorted()
+        Trả về một mảng mới với các phần tử được sắp xếp theo thứ tự tăng dần mà không sửa đổi mảng ban đầu.
+        
+        Array.prototype.toSpliced()
+        Trả về một mảng mới với một số phần tử đã bị loại bỏ và/hoặc được thay thế tại một chỉ mục nhất định mà không sửa đổi mảng ban đầu.
+        
+        Array.prototype.toString()
+        Trả về một chuỗi đại diện cho mảng đang gọi và các phần tử của nó. Ghi đè Object.prototype.toString()phương thức.
+        
+        Array.prototype.unshift()
+        Thêm một hoặc nhiều phần tử vào trước một mảng và trả về phần tử mới lengthcủa mảng.
+        
+        Array.prototype.values()
+        Trả về một đối tượng lặp mảng mới chứa các giá trị cho từng chỉ mục trong mảng.
+        
+        Array.prototype.with()
+        Trả về một mảng mới với phần tử tại chỉ mục đã cho được thay thế bằng giá trị đã cho mà không sửa đổi mảng ban đầu.
+        
+        Array.prototype[@@iterator]()
+        Bí danh cho values()phương thức theo mặc định.
+        
+        Ví dụ
+        Phần này cung cấp một số ví dụ về các thao tác mảng phổ biến trong JavaScript.
+        
+        Lưu ý: Nếu bạn chưa quen với kiến ​​thức cơ bản về mảng, trước tiên hãy cân nhắc đọc Các bước đầu tiên của JavaScript: Mảng , phần này giải thích mảng là gì và bao gồm các ví dụ khác về các thao tác mảng phổ biến.
+        
+        Tạo một mảng
+        Ví dụ này cho thấy ba cách để tạo mảng mới: đầu tiên sử dụng ký hiệu hằng mảng , sau đó sử dụng Array()hàm tạo và cuối cùng sử dụng String.prototype.split()để xây dựng mảng từ một chuỗi.
+        
+        JS
+        Sao chép vào clipboard
+        // 'fruits' array created using array literal notation.
+        const fruits = ["Apple", "Banana"];
+        console.log(fruits.length);
+        // 2
+        
+        // 'fruits2' array created using the Array() constructor.
+        const fruits2 = new Array("Apple", "Banana");
+        console.log(fruits2.length);
+        // 2
+        
+        // 'fruits3' array created using String.prototype.split().
+        const fruits3 = "Apple, Banana".split(", ");
+        console.log(fruits3.length);
+        // 2
+        Tạo một chuỗi từ một mảng
+        Ví dụ này sử dụng join()phương thức để tạo một chuỗi từ fruitsmảng.
+        
+        JS
+        Sao chép vào clipboard
+        const fruits = ["Apple", "Banana"];
+        const fruitsString = fruits.join(", ");
+        console.log(fruitsString);
+        // "Apple, Banana"
+        Truy cập một mục mảng theo chỉ mục của nó
+        Ví dụ này cho thấy cách truy cập các mục trong fruitsmảng bằng cách chỉ định số chỉ mục vị trí của chúng trong mảng.
+        
+        JS
+        Sao chép vào clipboard
+        const fruits = ["Apple", "Banana"];
+        
+        // The index of an array's first element is always 0.
+        fruits[0]; // Apple
+        
+        // The index of an array's second element is always 1.
+        fruits[1]; // Banana
+        
+        // The index of an array's last element is always one
+        // less than the length of the array.
+        fruits[fruits.length - 1]; // Banana
+        
+        // Using an index number larger than the array's length
+        // returns 'undefined'.
+        fruits[99]; // undefined
+        Tìm chỉ mục của một mục trong một mảng
+        Ví dụ này sử dụng indexOf()phương thức để tìm vị trí (chỉ mục) của chuỗi "Banana"trong fruitsmảng.
+        
+        JS
+        Sao chép vào clipboard
+        const fruits = ["Apple", "Banana"];
+        console.log(fruits.indexOf("Banana"));
+        // 1
+        Kiểm tra xem một mảng có chứa một mục nhất định không
+        Ví dụ này cho thấy hai cách để kiểm tra xem mảng fruitscó chứa "Banana"và "Cherry": đầu tiên bằng includes()phương thức này, sau đó bằng indexOf()phương thức để kiểm tra giá trị chỉ mục không phải là -1.
+        
+        JS
+        Sao chép vào clipboard
+        const fruits = ["Apple", "Banana"];
+        
+        fruits.includes("Banana"); // true
+        fruits.includes("Cherry"); // false
+        
+        // If indexOf() doesn't return -1, the array contains the given item.
+        fruits.indexOf("Banana") !== -1; // true
+        fruits.indexOf("Cherry") !== -1; // false
+        Nối một mục vào một mảng
+        Ví dụ này sử dụng push()phương thức để nối thêm một chuỗi mới vào fruitsmảng.
+        
+        JS
+        Sao chép vào clipboard
+        const fruits = ["Apple", "Banana"];
+        const newLength = fruits.push("Orange");
+        console.log(fruits);
+        // ["Apple", "Banana", "Orange"]
+        console.log(newLength);
+        // 3
+        Xóa mục cuối cùng khỏi một mảng
+        Ví dụ này sử dụng pop()phương thức để xóa mục cuối cùng khỏi fruitsmảng.
+        
+        JS
+        Sao chép vào clipboard
+        const fruits = ["Apple", "Banana", "Orange"];
+        const removedItem = fruits.pop();
+        console.log(fruits);
+        // ["Apple", "Banana"]
+        console.log(removedItem);
+        // Orange
+        Lưu ý: pop() chỉ có thể được sử dụng để xóa mục cuối cùng khỏi một mảng. Để xóa nhiều mục khỏi cuối mảng, hãy xem ví dụ tiếp theo.
+        
+        Xóa nhiều mục khỏi cuối mảng
+        Ví dụ này sử dụng splice()phương thức để xóa 3 mục cuối cùng khỏi fruitsmảng.
+        
+        JS
+        Sao chép vào clipboard
+        const fruits = ["Apple", "Banana", "Strawberry", "Mango", "Cherry"];
+        const start = -3;
+        const removedItems = fruits.splice(start);
+        console.log(fruits);
+        // ["Apple", "Banana"]
+        console.log(removedItems);
+        // ["Strawberry", "Mango", "Cherry"]
+        Cắt bớt một mảng xuống chỉ còn N mục đầu tiên của nó
+        Ví dụ này sử dụng splice()phương thức này để cắt bớt fruitsmảng xuống chỉ còn 2 mục đầu tiên.
+        
+        JS
+        Sao chép vào clipboard
+        const fruits = ["Apple", "Banana", "Strawberry", "Mango", "Cherry"];
+        const start = 2;
+        const removedItems = fruits.splice(start);
+        console.log(fruits);
+        // ["Apple", "Banana"]
+        console.log(removedItems);
+        // ["Strawberry", "Mango", "Cherry"]
+        Xóa mục đầu tiên khỏi một mảng
+        Ví dụ này sử dụng shift()phương thức để xóa mục đầu tiên khỏi fruitsmảng.
+        
+        JS
+        Sao chép vào clipboard
+        const fruits = ["Apple", "Banana"];
+        const removedItem = fruits.shift();
+        console.log(fruits);
+        // ["Banana"]
+        console.log(removedItem);
+        // Apple
+        Lưu ý: shift() chỉ có thể được sử dụng để xóa mục đầu tiên khỏi mảng. Để xóa nhiều mục khỏi đầu mảng, hãy xem ví dụ tiếp theo.
+        
+        Xóa nhiều mục khỏi đầu mảng
+        Ví dụ này sử dụng splice()phương thức để xóa 3 mục đầu tiên khỏi fruitsmảng.
+        
+        JS
+        Sao chép vào clipboard
+        const fruits = ["Apple", "Strawberry", "Cherry", "Banana", "Mango"];
+        const start = 0;
+        const deleteCount = 3;
+        const removedItems = fruits.splice(start, deleteCount);
+        console.log(fruits);
+        // ["Banana", "Mango"]
+        console.log(removedItems);
+        // ["Apple", "Strawberry", "Cherry"]
+        Thêm mục đầu tiên mới vào một mảng
+        Ví dụ này sử dụng unshift()phương thức này để thêm, tại chỉ mục 0, một mục mới vào fruitsmảng — biến nó thành mục mới đầu tiên trong mảng.
+        
+        JS
+        Sao chép vào clipboard
+        const fruits = ["Banana", "Mango"];
+        const newLength = fruits.unshift("Strawberry");
+        console.log(fruits);
+        // ["Strawberry", "Banana", "Mango"]
+        console.log(newLength);
+        // 3
+        Xóa một mục theo chỉ mục
+        Ví dụ này sử dụng splice()phương thức để xóa chuỗi "Banana"khỏi fruitsmảng - bằng cách chỉ định vị trí chỉ mục của "Banana".
+        
+        JS
+        Sao chép vào clipboard
+        const fruits = ["Strawberry", "Banana", "Mango"];
+        const start = fruits.indexOf("Banana");
+        const deleteCount = 1;
+        const removedItems = fruits.splice(start, deleteCount);
+        console.log(fruits);
+        // ["Strawberry", "Mango"]
+        console.log(removedItems);
+        // ["Banana"]
+        Xóa nhiều mục theo chỉ mục
+        Ví dụ này sử dụng splice()phương thức để xóa các chuỗi "Banana"và "Strawberry"khỏi fruitsmảng — bằng cách chỉ định vị trí chỉ mục của "Banana", cùng với tổng số mục cần xóa.
+        
+        JS
+        Sao chép vào clipboard
+        const fruits = ["Apple", "Banana", "Strawberry", "Mango"];
+        const start = 1;
+        const deleteCount = 2;
+        const removedItems = fruits.splice(start, deleteCount);
+        console.log(fruits);
+        // ["Apple", "Mango"]
+        console.log(removedItems);
+        // ["Banana", "Strawberry"]
+        Thay thế nhiều mục trong một mảng
+        Ví dụ này sử dụng splice()phương thức để thay thế 2 mục cuối cùng trong fruitsmảng bằng các mục mới.
+        
+        JS
+        Sao chép vào clipboard
+        const fruits = ["Apple", "Banana", "Strawberry"];
+        const start = -2;
+        const deleteCount = 2;
+        const removedItems = fruits.splice(start, deleteCount, "Mango", "Cherry");
+        console.log(fruits);
+        // ["Apple", "Mango", "Cherry"]
+        console.log(removedItems);
+        // ["Banana", "Strawberry"]
+        Lặp lại trên một mảng
+        Ví dụ này sử dụng một for...ofvòng lặp để lặp qua fruitsmảng, ghi từng mục vào bảng điều khiển.
+        
+        JS
+        Sao chép vào clipboard
+        const fruits = ["Apple", "Mango", "Cherry"];
+        for (const fruit of fruits) {
+          console.log(fruit);
+        }
+        // Apple
+        // Mango
+        // Cherry
+        Nhưng for...ofđây chỉ là một trong nhiều cách để lặp qua bất kỳ mảng nào; để biết thêm các cách, hãy xem Vòng lặp và phép lặp cũng như xem tài liệu về các phương thức every(), filter(), flatMap(), map(), reduce()và reduceRight()— và xem ví dụ tiếp theo sử dụng forEach()phương thức này.
+        
+        Gọi hàm trên mỗi phần tử trong mảng
+        Ví dụ này sử dụng forEach()phương thức để gọi hàm trên từng phần tử trong fruitsmảng; hàm này sẽ ghi từng mục vào bảng điều khiển cùng với số chỉ mục của mục đó..</p>
+    </div>
+    <div class="tab-pane">
+      <h2>Vue.js</h2>
+      <p>Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. </p>
+    </div>
+  </div>
+</div>
+    <script>
+         const $ = document.querySelector.bind(document)
+         const $$ = document.querySelectorAll.bind(document)
+
+         const tabs = $$ ('.tab-item')
+         const panes = $$ ('.tab-pane')
+
+         const tabActive = $('.tab-item.active')
+         const line = $('.tabs .line')
+         
+         line.style.left = tabActive.offsetLeft +'px'
+         line.style.width = tabActive.offsetWidth +'px'
+    
+         tabs.forEach((tab, index)=>{
+            const pane = panes[index]
+            tab.onclick = function(){
+                $('.tab-item.active').classList.remove('active')
+                $('.tab-pane.active').classList.remove('active')
+
+                line.style.left = this.offsetLeft +'px'
+                line.style.width = this.offsetWidth +'px'
+
+                this.classList.add('active')
+                pane.classList.add('active')
+
+            }
+         })
+    </script>
+</body>
+</html>
