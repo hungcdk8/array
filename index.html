@@ -36,79 +36,6 @@
   <div class="tab-content">
     <div class="tab-pane active">
       <h2>React</h2>
-      <p>Chào các bạn, hôm nay cafedev chia sẻ cho ace một danh sách các bài tập từ cơ bản tới nâng cao liên quan tới các kiến thức cơ bản trong lập trình Javascript. Cụ thể, trong bài này chúng ta sẽ làm quen với Object, this, new, constructorm, Optional. Từ đó giúp ace nâng cao kiến thức, kỹ năng, kinh nghiệm lập trình của mình và áp dụng nó vào thực tế.
-        Trước khi đi vào chi tiết bài tập, cafedev khuyến khích ace tự code bài tập của mình trước khi tham khảo bài hướng dẫn nhé. 
-        Để chạy hoặc code các bài tập sau, ace có thể code trên trang web này như sau: 
-        Chọn new
-        Chọn dự án bạn muốn code, ở đây có nhiều lựa chọn như Javascript, AngularJS, React,…. Tất nhiên mình sẽ chọn Javascript.
-        Sau đó bạn sẽ thấy nơi bạn code.
-        Sau khi code sau chọn Preview để xem kết quả.
-        Ngoài ra ace cũng có thể dùng các IDE đã được giới thiệu tại đây để code và chạy code đó trên máy tính của mình nhé 
-        Lưu ý: Mọi bài tập bên dưới cũng như các bài tập khác trong Series Javascript này được tạo ra từ các bài học và kiến thức của từng phần trong series tự học Javascript này. Nếu ace nào chưa làm được hoặc chưa hiểu kỹ về bài học thì bạn có thể tham khảo lại series tự học này nhé. Chúc các bạn thành công</p>
-    </div>
-    <div class="tab-pane">
-      <h2>Angular</h2>
-      <p>Khai báo<br>
-
-        Cách 1: <br>
-        
-        Type <Tên kiểu mảng> = Array[Chỉ số] Of <Kiểu phần tử>;<br>
-        Var <Tên biến mảng> : <Tên kiểu mảng>;
-        Cách 2:
-        
-        Var <Tên biến mảng> : Array[Chỉ số] Of <Kiểu phần tử>;
-        Trong đó chỉ số phải là một kiểu miền con, kiểu vô hướng liệt kê, kiểu char hoặc kiểu boolean. {Tuy nhiên. người ta thường dùng kiểu miền con các số nguyên là dễ hình dung nhất vì nó gần giống với khái niệm chỉ số trong toán học.}
-        
-        Ví dụ:
-        
-        Type Mangnguyen = Array[1..5] Of Integer;
-            MangKytu = Array[Byte] Of Char;
-        Var A : Mangnguyen;
-            C : MangKytu;
-        hoặc:
-        
-        Var A : Array[1..5] Of Integer;
-            C : Array[Byte] Of Char;
-        Cách khai báo trực tiếp có vẻ đơn giản và ngắn gọn hơn so với cách khai báo gián tiếp nhưng nhiều TH ta bắt buộc phải dùng cách khai báo gián tiếp.
-        
-        Truy xuất
-        Mỗi phần tử của mảng được truy xuất thông qua cú pháp:
-        
-        <Tên biến mảng>[<Chỉ số>]
-        Ví dụ: A[1], A[2],…
-        
-        Chú ý: Hai mảng A và B có cùng số phần tử và cùng kiểu phần tử, ta có thể thay toàn bộ phần tử A bởi các phần tử tương ứng của B bằng một phép gán A := B.
-        
-        Mảng nhiều chiều
-        Khai báo
-        
-        Cách 1:
-        
-        Type <Tên kiêu mảng> = Array[Chỉ số 1, Chỉ số 2] Of <Kiểu phần tử>;
-        Var <Tên biến mảng> : <Tên kiểu mảng>;
-        Cách 2:
-        
-        Var <Tên biến mảng> : Array[chỉ số 1, chỉ số 2] Of <Kiểu phần tử>;
-        Chỉ số 1 và chỉ số 2 là các chỉ số của hàng và cột, chúng cách nhau bởi dấu phẩy
-        
-        Ví dụ:
-        
-        Type Mangnguyen = Array[1..5,1..3] Of Integer;
-        Var A : Mangnguyen;
-        hoặc:
-        
-        Var a: Array[1..5, 1..3] Of Integer;
-        Sau khi khai báo mảng A sẽ có 5 hàng và 3 cột.
-        
-        Chú ý: Mảng 2 chiều còn gọi là ma trận.
-        
-        Cách truy xuất
-        Để truy xuất đến phần tử hàng i cột j ta viết A[i, j] hoặc a[i][j].
-        
-        Ví dụ: A[1, 2], A[2][5].</p>
-    </div>
-    <div class="tab-pane">
-      <h2>Ember</h2>
       <p>Đối Arraytượng, giống như mảng trong các ngôn ngữ lập trình khác, cho phép lưu trữ một tập hợp nhiều mục dưới một tên biến duy nhất và có các thành viên để thực hiện các thao tác mảng phổ biến .<br>
 
         Sự miêu tả<br>
@@ -698,7 +625,71 @@
         Nhưng for...ofđây chỉ là một trong nhiều cách để lặp qua bất kỳ mảng nào; để biết thêm các cách, hãy xem Vòng lặp và phép lặp cũng như xem tài liệu về các phương thức every(), filter(), flatMap(), map(), reduce()và reduceRight()— và xem ví dụ tiếp theo sử dụng forEach()phương thức này.
         
         Gọi hàm trên mỗi phần tử trong mảng
-        Ví dụ này sử dụng forEach()phương thức để gọi hàm trên từng phần tử trong fruitsmảng; hàm này sẽ ghi từng mục vào bảng điều khiển cùng với số chỉ mục của mục đó..</p>
+        Ví dụ này sử dụng forEach()phương thức để gọi hàm trên từng phần tử trong fruitsmảng; hàm này sẽ ghi từng mục vào bảng điều khiển cùng với số chỉ mục của mục đó..</p></p>
+    </div>
+    <div class="tab-pane">
+      <h2>Angular</h2>
+      <p>Khai báo<br>
+
+        Cách 1: <br>
+        
+        Type <Tên kiểu mảng> = Array[Chỉ số] Of <Kiểu phần tử>;<br>
+        Var <Tên biến mảng> : <Tên kiểu mảng>;<br>
+        Cách 2:<br>
+        
+        Var <Tên biến mảng> : Array[Chỉ số] Of <Kiểu phần tử>;<br>
+        Trong đó chỉ số phải là một kiểu miền con, kiểu vô hướng liệt kê, kiểu char hoặc kiểu boolean. {Tuy nhiên. người ta thường dùng kiểu miền con các số nguyên là dễ hình dung nhất vì nó gần giống với khái niệm chỉ số trong toán học.}<br>
+        
+        Ví dụ:<br>
+        
+        Type Mangnguyen = Array[1..5] Of Integer;<br>
+            MangKytu = Array[Byte] Of Char;<br>
+        Var A : Mangnguyen;<br>
+            C : MangKytu;<br>
+        hoặc:<br>
+        
+        Var A : Array[1..5] Of Integer;<br>
+            C : Array[Byte] Of Char;<br>
+        Cách khai báo trực tiếp có vẻ đơn giản và ngắn gọn hơn so với cách khai báo gián tiếp nhưng nhiều TH ta bắt buộc phải dùng cách khai báo gián tiếp.<br>
+        
+        Truy xuất<br>
+        Mỗi phần tử của mảng được truy xuất thông qua cú pháp:<br>
+        
+        <Tên biến mảng>[<Chỉ số>]<br>
+        Ví dụ: A[1], A[2],…<br>
+        Chú ý: Hai mảng A và B có cùng số phần tử và cùng kiểu phần tử, ta có thể thay toàn bộ phần tử A bởi các phần tử tương ứng của B bằng một phép gán A := B.<br>
+        
+        Mảng nhiều chiều<br>
+        Khai báo<br>
+        
+        Cách 1:<br>
+        
+        Type <Tên kiêu mảng> = Array[Chỉ số 1, Chỉ số 2] Of <Kiểu phần tử>;<br>
+        Var <Tên biến mảng> : <Tên kiểu mảng>;<br>
+        Cách 2:<br>
+        
+        Var <Tên biến mảng> : Array[chỉ số 1, chỉ số 2] Of <Kiểu phần tử>;<br>
+        Chỉ số 1 và chỉ số 2 là các chỉ số của hàng và cột, chúng cách nhau bởi dấu phẩy<br>
+        
+        Ví dụ:<br>
+        
+        Type Mangnguyen = Array[1..5,1..3] Of Integer;<br>
+        Var A : Mangnguyen;<br>
+        hoặc:<br>
+        
+        Var a: Array[1..5, 1..3] Of Integer;<br>
+        Sau khi khai báo mảng A sẽ có 5 hàng và 3 cột.<br>
+        
+        Chú ý: Mảng 2 chiều còn gọi là ma trận.<br>
+        
+        Cách truy xuất<br>
+        Để truy xuất đến phần tử hàng i cột j ta viết A[i, j] hoặc a[i][j].
+        
+        Ví dụ: A[1, 2], A[2][5].</p>
+    </div>
+    <div class="tab-pane">
+      <h2>Ember</h2>
+      <p>
     </div>
     <div class="tab-pane">
       <h2>Vue.js</h2>
